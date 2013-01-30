@@ -22,8 +22,33 @@ BOOL CALLBACK DlgMain(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
     case WM_COMMAND:
     {
-        switch(LOWORD(wParam))
+        switch (LOWORD(wParam))
         {
+        case IDC_OK:
+            {
+                switch(HIWORD(wParam))
+                {
+                    case BN_CLICKED:
+                    {
+                    MessageBox(0, "OK clicked!", "", MB_OK);
+                    break;
+                    }
+                }
+            break;
+            }
+        case IDC_CLOSE:
+            {
+                switch(HIWORD(wParam))
+                {
+                case BN_CLICKED:
+                    {
+                    MessageBox(0, "Close clicked!", "", MB_OK);
+                    break;
+                    }
+
+                }
+            break;
+            }
         }
     }
     return TRUE;

@@ -3,3 +3,5 @@
 #endif
 
 #define DLG_MAIN                                100
+#define IDC_OK                                  1002
+#define IDC_CLOSE                               1003
